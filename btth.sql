@@ -60,7 +60,7 @@ select
     p.Admission_Time,
     case
         when v.Heart_Rate is null then 'PENDING'
-        else cast(v.Heart_Rate as char)
+        else (v.Heart_Rate )
     end as Heart_Status,
     case
         when v.Heart_Rate > 120 or v.Heart_Rate < 50 then 'CRITICAL'
